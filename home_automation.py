@@ -47,16 +47,18 @@ def home():
     
     return render_template("index.html", RAM_used = RAM_used, cpu_temp = cpu_temp, temp = text_temp, temp_city = temp_city)
     
+# I will extend the index page to show the temperature & humidity history via graphics. Also I will be adding a videos
+# section where I will be playing mp4 movie files.
 
-@app.route('/history/')
-def history():
+# @app.route('/history/')
+# def history():
     
-    return render_template("history.html")
+#     return render_template("history.html")
 
-@app.route('/videos/')
-def videos():
+# @app.route('/videos/')
+# def videos():
     
-    return render_template("videos.html")
+#     return render_template("videos.html")
 
 @app.route('/lights/')
 def lights():
