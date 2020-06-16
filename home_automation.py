@@ -44,26 +44,6 @@ def home():
     if (temperature_dht != ""):
         text_temp = temperature_dht
     
-#     # The callback for when the client receives a CONNACK response from the server.
-#     def on_connect(client, userdata, flags, rc):
-#         print("Connected with result code "+str(rc))
-#         # Subscribing in on_connect() means that if we lose the connection and
-#         # reconnect then subscriptions will be renewed.
-#         client.subscribe("test/message")
-#         client.subscribe("test/message")
-# 
-#     # The callback for when a PUBLISH message is received from the server.
-#     def on_message(client, userdata, msg):
-#         rawdata = str(msg.payload)
-#         temp = rawdata[2:7]
-#         humidity = rawdata[8:13]
-#         print(temp)
-#         
-#     
-#     client = mqtt.Client()
-#     client.on_connect = on_connect
-#     client.on_message = on_message
-#     client.connect("10.0.0.2", 1883, 60)
     
     return render_template("index.html", RAM_used = RAM_used, cpu_temp = cpu_temp, temp = text_temp, temp_city = temp_city)
     
